@@ -1,0 +1,10 @@
+.reset-button {
+    height: 70px;
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .style-reset {
+    padding-top: 5px;
+    color: rgb(22, 83, 161)
+  }

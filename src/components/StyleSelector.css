@@ -1,0 +1,22 @@
+.style-selector {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+
+  }
+  
+  .style-icon {
+    height: 60px;
+    width: auto;
+    object-fit: cover;
+  }
+  
+  .style-icon:hover {
+    transform: scale(1.1);
+  }
+  
+   .style-label {
+    padding-top: 5px;
+    color: rgb(255, 37, 164)
+  }
+  

@@ -1,0 +1,73 @@
+
+
+  .editor-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+  }
+
+
+  .editor-canvas-wrapper {
+    display: flex;
+    position: relative;
+  }
+  
+
+  
+  
+  .editor-canvas {
+    cursor: url('../assets/cursor.png') 16 16, auto;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    user-select: none;
+    flex: none;
+  }
+  
+  
+  .image-layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .editable-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.05s linear;
+    pointer-events: auto;
+  }
+  
+  .border-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none; 
+  }
+
+  .button-container {
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .button-container img:hover{
+    transform: scale(1.1);
+  }
+
+  
+
+
+  

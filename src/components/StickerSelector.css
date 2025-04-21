@@ -1,0 +1,42 @@
+.sticker-selector-wrapper {
+    width: 700px;
+    height: 350px;
+    background-image: url('../assets/borderbox1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sticker-list {
+    display:flex;
+    flex-direction: row;
+    gap: 20px; 
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 0 10px;
+    align-items: center;
+  }
+  
+  .sticker-thumb {
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s;
+  }
+  
+  .sticker-thumb:hover {
+    transform: scale(1.1);
+  }
+  
+
+  .sticker-selector-wrapper:hover{
+    transform: scale(1.03);
+  }
