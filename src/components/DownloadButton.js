@@ -2,6 +2,21 @@ import React from 'react';
 import downloadIcon from '../assets/download.png';
 import './DownloadButton.css';
 
+/**
+ * DownloadButton
+ * 
+ * This component renders a button that allows the user to download the edited image.
+ * When clicked, it triggers the handleDownload function, henerating a PNG with border, stickers and scaling
+ *
+ * @param {string} imageSrc - URL of the uploaded image
+ * @param {string} selectedBorder - URL of the selected border
+ * @param {Object} position - Position of the image in the canvas
+ * @param {number} scale - Scaling factor of the image
+ * @param {Array} stickers - List of stickers to be added
+ * @param {Object} displaySize - Size of the display area
+ * 
+ * @returns {JSX.Element} The rendered download button component.
+ */
 const DownloadButton = ({
   imageSrc,
   selectedBorder,
@@ -10,6 +25,11 @@ const DownloadButton = ({
   stickers,
   displaySize, 
 }) => {
+   /**
+   * 
+   * Generates a canvas with the uploaded image, selected border, and stickers,
+   * and triggers the download of the final image as a PNG file
+   */
   const handleDownload = () => {
     if (!imageSrc || !selectedBorder) {
       alert('Please upload image and choose border!');
@@ -26,16 +46,11 @@ const DownloadButton = ({
         const canvasW = borderImage.naturalWidth;
         const canvasH = borderImage.naturalHeight;
 
-        console.log('[DEBUG] displaySize', displaySize); 
-    console.log('[DEBUG] baseImage', baseImage.naturalWidth, baseImage.naturalHeight);
-    console.log('[DEBUG] borderImage', canvasW, canvasH);
-
         const canvas = document.createElement('canvas');
         canvas.width = canvasW;
         canvas.height = canvasH;
         const ctx = canvas.getContext('2d');
 
-        // width and height of original region
         const displayW = displaySize.width;
         const displayH = displaySize.height;
 
