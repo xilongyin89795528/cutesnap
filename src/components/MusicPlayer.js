@@ -3,6 +3,16 @@ import bgm from '../assets/music.mp3';
 import musicIcon from '../assets/play.png';
 import './MusicPlayer.css';
 
+/**
+ * Music Player Component
+ * 
+ * It allows the user to play background music of the website.
+ * It plays or pauses the music when clicked.
+ *
+ * @param {Function} onImageUpload - A callback function that receives the URL of the uploaded image
+ * 
+ * @returns {JSX.Element} The image uploader component.
+ */
 const MusicPlayer = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
