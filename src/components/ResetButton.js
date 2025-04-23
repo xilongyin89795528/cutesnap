@@ -2,6 +2,15 @@ import resetIcon from '../assets/reset.png';
 import React from 'react';
 import './ResetButton.css';
 
+/**
+ * ResetButton
+ * 
+ * When clicked, it triggers the onClick callback to reset.
+ *
+ * @param {Function} onClick - A callback function that is triggered when the reset button is clicked
+ * 
+ * @returns {JSX.Element} The reset button component
+ */
 const ResetButton = ({ onClick }) => {
     return (
       <div className="image-reset">
