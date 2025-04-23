@@ -7,6 +7,26 @@ import './Selector.css';
 import borderIcon from '../assets/border.png';
 import stickerIcon from '../assets/sticker.png';
 
+/**
+ * SelectorPanel
+ * 
+ * It displays a panel where the user can select borders or stickers to apply to an image.
+ * has two modes "border" and "sticker", which allow the user to switch.
+ * The selected border or sticker category is filtered based on the user’s choice.
+ *
+ * @param {Object[]} borderList - List of available borders
+ * @param {Object[]} stickerList - List of available sticker
+ * @param {Object[]} borderCategoryList - List of border categories
+ * @param {Object[]} stickerCategoryList - List of sticker categories
+ * @param {string} selectedBorderCategory - The currently selected border category
+ * @param {Function} setSelectedBorderCategory - Function to update the selected border category
+ * @param {string} selectedStickerCategory - The currently selected sticker category
+ * @param {Function} setSelectedStickerCategory - Function to update the selected sticker category
+ * @param {Function} onSelectBorder - Callback function triggered when a border is selected
+ * @param {Function} onAddSticker - Callback function triggered when a sticker is added
+ * 
+ * @returns {JSX.Element} The SelectorPanel component
+ */
 const SelectorPanel = ({
   borderList,
   stickerList,
